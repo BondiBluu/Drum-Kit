@@ -1,5 +1,13 @@
-//selecting the button and adding an event listener that listens for a click event
-document.querySelector("button").addEventListener("click", function(){
-    alert("Button clicked");
-});
+//select all the buttons and add an event listener to each button
+for(var i = 0; i < document.querySelectorAll(".drum").length; i++){
+
+    document.querySelectorAll(".drum")[i].addEventListener("click", function(){
+
+        
+
+        var audio = new Audio("sounds/tom-1.mp3");
+        audio.play();
+    });
+}
+
 
