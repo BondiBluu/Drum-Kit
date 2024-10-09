@@ -5,9 +5,9 @@ body {
 
 h1 {
   font-size: 5rem;
-  color: #DBEDF3;
+  color: #84b258;
   font-family: "Arvo", cursive;
-  text-shadow: 3px 0 #e78fb637;
+  text-shadow: 3px 0 #93657a37;
 
 }
 
@@ -69,8 +69,8 @@ footer {
   font-family: 'Arvo', cursive;
   line-height: 2;
   font-weight: 900;
-  color: #DA0463;
-  text-shadow: 3px 0 #DBEDF3;
+  color: #678849;
+  text-shadow: 3px 0 #2d4248;
   border-radius: 15px;
   display: inline-block;
   width: 150px;
