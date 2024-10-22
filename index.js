@@ -1,3 +1,4 @@
+
 //detecting button presses
 
 //select all the buttons and add an event listener to each button
@@ -10,7 +11,12 @@ for(var i = 0; i < document.querySelectorAll(".drum").length; i++){
 
     //make a sound based on the innerHTML of the button that was clicked
     makeSound(buttonInnerHTML);
+
+    //add animation to the button that was clicked
+    buttonAnim(buttonInnerHTML);
          });
+
+    
 }
 
 //detecting keyboard presses
@@ -20,6 +26,9 @@ document.addEventListener("keydown", function(event){
     
     //make a sound based on the key that was pressed
     makeSound(event.key); 
+
+    //add animation to the button that was pressed
+    buttonAnim(event.key);
 
 });
 
@@ -60,4 +69,19 @@ function makeSound(key){
             console.log(key);
 
         }
+}
+
+//function that adds animation to the button that was clicked
+
+function buttonAnim(currentKey){
+
+    //the button who's style we're going to change
+    var activeButton = document.querySelector("." + currentKey);
+
+    activeButton.classList.add("pressed");
+
+    //making a delay of 100ms before removing the animation
+    setTimeout(function(){
+        activeButton.classList.remove("pressed");
+    }, 100);
 }
