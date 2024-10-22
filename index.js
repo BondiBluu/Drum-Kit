@@ -1,21 +1,29 @@
+//detecting button presses
+
 //select all the buttons and add an event listener to each button
 for(var i = 0; i < document.querySelectorAll(".drum").length; i++){
 
     document.querySelectorAll(".drum")[i].addEventListener("click", function(){
 
+    //this.innerHTML is the innerHTML of the button that was clicked
     var buttonInnerHTML = this.innerHTML;
 
+    //make a sound based on the innerHTML of the button that was clicked
     makeSound(buttonInnerHTML);
          });
 }
 
+//detecting keyboard presses
+
+//add an event listener to the whole document. 
 document.addEventListener("keydown", function(event){
-    var key = event.key;
     
-    makeSound(key); 
+    //make a sound based on the key that was pressed
+    makeSound(event.key); 
 
 });
 
+//function that makes a sound based on the key that was pressed
 function makeSound(key){
     switch(key){
         case "w":
